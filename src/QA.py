@@ -8,6 +8,7 @@ from langchain_core.output_parsers import StrOutputParser
 from dotenv import load_dotenv
 from pathlib import Path
 import os
+import streamlit as at
 
 load_dotenv()
 groq_api_key = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY")
