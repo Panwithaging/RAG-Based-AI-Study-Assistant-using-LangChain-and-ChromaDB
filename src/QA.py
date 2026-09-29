@@ -10,7 +10,7 @@ from pathlib import Path
 import os
 
 load_dotenv()
-groq_api_key=os.getenv("GROQ_API_KEY")
+groq_api_key = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY")
 
 llm=ChatGroq(
     api_key=groq_api_key,
